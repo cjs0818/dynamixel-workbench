@@ -71,20 +71,28 @@ include_directories(
   ${YAML_CPP_INCLUDE_DIRS}
 )
 
-add_executable(dynamixel_workbench_controllers src/dynamixel_workbench_controllers.cpp src/trajectory_generator.cpp)
-add_dependencies(dynamixel_workbench_controllers ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(dynamixel_workbench_controllers ${catkin_LIBRARIES} ${Eigen3_LIBRARIES} ${YAML_CPP_LIBRARIES})
+add_executable(position_control src/position_control.cpp)
+add_dependencies(position_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(position_control ${catkin_LIBRARIES})
 
-add_executable(find_dynamixel src/find_dynamixel.cpp)
-add_dependencies(find_dynamixel ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(find_dynamixel ${catkin_LIBRARIES})
+# add_executable(dynamixel_workbench_controllers src/dynamixel_workbench_controllers.cpp src/position_control.cpp)
+# add_dependencies(dynamixel_workbench_controllers ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(dynamixel_workbench_controllers ${catkin_LIBRARIES} ${Eigen3_LIBRARIES} ${YAML_CPP_LIBRARIES})
+
+# add_executable(find_dynamixel src/find_dynamixel.cpp)
+# add_dependencies(find_dynamixel ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(find_dynamixel ${catkin_LIBRARIES})
 
 #################################################################################
 ## Install
 #################################################################################
-install(TARGETS dynamixel_workbench_controllers find_dynamixel
+install(TARGETS position_control 
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+# install(TARGETS dynamixel_workbench_controllers find_dynamixel
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
