@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_openmanipulator_arm_controller
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+initial:  # Define initial robot poses.
+  - group: openmanipulator_arm
+    pose: arm_zero
