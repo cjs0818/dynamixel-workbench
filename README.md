@@ -3,11 +3,14 @@
 Dynamixel Workbench package has been prepared for the Openmanipulator controlling.
 
 This package has been forked from the official Dymnamixel Workbench package and modified.
+What is included in the original package you can see the information from the official repository information below.
 
-## ROS Packages for Dynamixel Workbench
+
+
+## ROS Packages for Dynamixel Workbench (original)
 |Version|Melodic + Ubuntu Bionic|
 |:---:|:---:|
-|[![GitHub version](https://badge.fury.io/gh/ROBOTIS-GIT%2Fdynamixel-workbench.svg)](https://badge.fury.io/gh/ROBOTIS-GIT%2Fdynamixel-workbench)|[![Build Status](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench.svg?branch=kinetic-devel)](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench)|[![Build Status](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench.svg?branch=melodic-devel)](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench)|
+|[![GitHub version](https://badge.fury.io/gh/ROBOTIS-GIT%2Fdynamixel-workbench.svg)](https://badge.fury.io/gh/ROBOTIS-GIT%2Fdynamixel-workbench)|[![Build Status][![Build Status](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench.svg?branch=melodic-devel)](https://travis-ci.org/ROBOTIS-GIT/dynamixel-workbench)|
 
 ## ROBOTIS e-Manual for Dynamixel Workbench
 - [ROBOTIS e-Manual for Dynamixel Workbench](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/)
