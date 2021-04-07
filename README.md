@@ -6,7 +6,6 @@ This package has been forked from the official Dymnamixel Workbench package and 
 What is included in the original package you can see the information from the official repository information below.
 
 
-
 ## ROS Packages for Dynamixel Workbench (original)
 |Version|Melodic + Ubuntu Bionic|
 |:---:|:---:|
