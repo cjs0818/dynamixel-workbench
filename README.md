@@ -28,8 +28,3 @@ This package has been forked from the official Dymnamixel Workbench package and 
 - [OpenCR-Hardware](https://github.com/ROBOTIS-GIT/OpenCR-Hardware)
 - [OpenCR](https://github.com/ROBOTIS-GIT/OpenCR)
 
-## Documents and Videos related to Dynamixel Workbench
-- [ROBOTIS e-Manual for Dynamixel Workbench](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/)
-- [ROBOTIS e-Manual for Dynamixel SDK](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/)
-- [ROBOTIS e-Manual for OpenManipulator](http://emanual.robotis.com/docs/en/platform/openmanipulator/)
-- [ROBOTIS e-Manual for OpenCR](http://emanual.robotis.com/docs/en/parts/controller/opencr10/)
