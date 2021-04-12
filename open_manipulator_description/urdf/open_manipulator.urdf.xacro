@@ -38,6 +38,7 @@
     <limit velocity="4.8" effort="1" lower="${-pi*0.9}" upper="${pi*0.9}" />
   </joint>
 
+  
   <!--  Link 2 -->
   <link name="link2">
     <visual>
@@ -72,6 +73,7 @@
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.57}" upper="${pi*0.5}" />
   </joint>
+
 
   <!--  Link 3 -->
   <link name="link3">
@@ -142,6 +144,7 @@
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.57}" upper="${pi*0.65}" />
   </joint>
+
 
   <!--  Link 5 -->
   <link name="link5">
