@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Transmission macro -->
-  <xacro:macro name="SimpleTransmissionPosition" params="joint n">
-    <transmission name="tran${n}">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${joint}">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="motor${n}">
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-  </xacro:macro>
+    <xacro:macro name="insert_effort_transmission" params="name">
+        <transmission name="${name}_tran">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${name}" >
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </joint>
 
-  <!-- Transmission macro -->
-  <xacro:macro name="SimpleTransmissionEffort" params="joint n">
-    <transmission name="tran${n}">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${joint}">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="motor${n}">
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-  </xacro:macro>
+            <actuator name="${name}_motor">
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
 
-  <!-- Transmission 1 -->
-  <xacro:SimpleTransmissionPosition n="1" joint="joint1" />
+    <xacro:macro name="insert_position_transmission" params="name">
+        <transmission name="${name}_tran">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${name}" >
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </joint>
 
-  <!-- Transmission 2 -->
-  <xacro:SimpleTransmissionPosition n="2" joint="joint2" />
+            <actuator name="${name}_motor">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
 
-  <!-- Transmission 3 -->
-  <xacro:SimpleTransmissionPosition n="3" joint="joint3" />
+    <xacro:macro name="insert_velocity_transmission" params="name">
+        <transmission name="${name}_tran">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${name}" >
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </joint>
 
-  <!-- Transmission 4 -->
-  <xacro:SimpleTransmissionPosition n="4" joint="joint4" />
-
-  <!-- Transmission 5 -->
-  <xacro:SimpleTransmissionEffort n="5" joint="gripper" />
-
-  <!-- Transmission 6 -->
-  <xacro:SimpleTransmissionEffort n="6" joint="gripper_sub" />
-
+            <actuator name="${name}_motor">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
 </robot>
