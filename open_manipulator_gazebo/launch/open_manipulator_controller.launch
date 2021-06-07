@@ -5,11 +5,11 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="joint1_position
-                          joint2_position
-                          joint3_position
-                          joint4_position
-                          gripper_position
+    output="screen" args="id_11_position
+                          id_12_position
+                          id_13_position
+                          id_14_position
+                          id_15_position
                           gripper_sub_position"/>
 
   <!-- Run gripper sub position publisher -->

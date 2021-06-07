@@ -1,15 +1,15 @@
 joint1_position:
   type: position_controllers/JointPositionController
-  joint: joint1
+  joint: id_11
 
 joint2_position:
   type: position_controllers/JointPositionController
-  joint: joint2
+  joint: id_12
 
 joint3_position:
   type: position_controllers/JointPositionController
-  joint: joint3
+  joint: id_13
 
 joint4_position:
   type: position_controllers/JointPositionController
-  joint: joint4
+  joint: id_14

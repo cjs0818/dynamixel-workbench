@@ -31,14 +31,14 @@
   </link>
 
   <!-- Joint 1 -->
-  <joint name="joint1" type="revolute">
+  <joint name="id_11" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
     <origin xyz="0.012 0.0 0.017" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.9}" upper="${pi*0.9}" />
   </joint>
-  <xacro:insert_position_transmission name="joint1" />
+  <xacro:insert_position_transmission name="id_11" />
 
   
   <!--  Link 2 -->
@@ -68,14 +68,14 @@
   </link>
 
   <!--  Joint 2 -->
-  <joint name="joint2" type="revolute">
+  <joint name="id_12" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
     <origin xyz="0.0 0.0 0.0595" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.57}" upper="${pi*0.5}" />
   </joint>
-  <xacro:insert_position_transmission name="joint2" />
+  <xacro:insert_position_transmission name="id_12" />
 
 
   <!--  Link 3 -->
@@ -105,14 +105,14 @@
   </link>
 
   <!--  Joint 3 -->
-  <joint name="joint3" type="revolute">
+  <joint name="id_13" type="revolute">
     <parent link="link3"/>
     <child link="link4"/>
     <origin xyz="0.024 0 0.128" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.3}" upper="${pi*0.44}" />
   </joint>
-  <xacro:insert_position_transmission name="joint3" />
+  <xacro:insert_position_transmission name="id_13" />
 
   <!--  Link 4 -->
   <link name="link4">
@@ -141,14 +141,14 @@
   </link>
 
   <!--  Joint 4 -->
-  <joint name="joint4" type="revolute">
+  <joint name="id_14" type="revolute">
     <parent link="link4"/>
     <child link="link5"/>
     <origin xyz="0.124 0.0 0.0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="${-pi*0.57}" upper="${pi*0.65}" />
   </joint>
-  <xacro:insert_position_transmission name="joint4" />
+  <xacro:insert_position_transmission name="id_14" />
 
 
   <!--  Link 5 -->
@@ -178,14 +178,14 @@
   </link>
 
   <!--  Gripper joint -->
-  <joint name="gripper" type="prismatic">
+  <joint name="id_15" type="prismatic">
     <parent link="link5"/>
     <child link="gripper_link"/>
     <origin xyz="0.0817 0.021 0.0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <limit velocity="4.8" effort="1" lower="-0.010" upper="0.019" />
   </joint>
-  <xacro:insert_position_transmission name="gripper" />
+  <xacro:insert_position_transmission name="id_15" />
 
   <!--  Gripper link -->
   <link name="gripper_link">
@@ -220,7 +220,7 @@
     <origin xyz="0.0817 -0.021 0" rpy="0 0 0"/>
     <axis xyz="0 -1 0"/>
     <limit velocity="4.8" effort="1" lower="-0.010" upper="0.019" />
-    <mimic joint="gripper" multiplier="1"/>
+    <mimic joint="id_15" multiplier="1"/>
   </joint>
   <xacro:insert_position_transmission name="gripper_sub" />
 
@@ -277,14 +277,6 @@
     </inertial>
   </link>
 
-  <!-- Realsense Camera Joint Position -->
-  <joint name="camera_joint" type="fixed">
-    <axis xyz="0 1 0" />
-    <origin xyz="0.070 0.032 0.052" rpy="0 0 0"/> 
-    <parent link="link5"/>
-    <child link="camera_link"/>
-  </joint>
 
-  <link name="camera_link"/>
   
 </robot>
