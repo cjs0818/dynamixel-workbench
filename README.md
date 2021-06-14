@@ -98,7 +98,7 @@ After the clonning the package of the manipulator which is includingg the Python
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/37059842/114139017-6fa9e680-9949-11eb-9ad4-70b69129e2e2.gif)
 
 
-Running the Gazebo simulation with MoveIt
+# Running the Gazebo simulation with MoveIt
 
 ## To run the simulation in Gazebo and MoveIt you should run:
 
@@ -111,7 +111,8 @@ After running launch files you will be able to see the results as shown below:
 
 ![test_simulation-1](https://user-images.githubusercontent.com/37059842/121841311-02377f00-cd19-11eb-9a10-bc030627d9dd.gif)
 
-Running the Moving the actual robot with MoveIt!
+# Running the Moving the actual robot with MoveIt!
+
 ## To run the actual actuators of robot and MoveIt! together to move it with suggested postion, then you need to follow the commads below:
 
             $ roslaunch open_manipulator_motion controller.launch
@@ -119,6 +120,12 @@ Running the Moving the actual robot with MoveIt!
      
  
 
+The result of the running those launch files you can see below:
+
+![test_real_robot_and_moveit](https://user-images.githubusercontent.com/37059842/121844405-e9ca6300-cd1e-11eb-9876-53df4f3eea6f.gif)
+
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/37059842/121847192-28fab300-cd23-11eb-98e2-37fef7793f51.gif)
 
 
 
