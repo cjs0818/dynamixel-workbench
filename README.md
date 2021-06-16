@@ -48,6 +48,17 @@ To [connect](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/ros_
 
 ## How to run the code
 
+#### Before running the code, you might have some problems with build the package after you cloned it.
+In the path dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv you need to create the JointCommand.srv, which is below:
+
+    string unit
+    uint8 id
+    float32 goal_position
+    ---
+    bool result 
+
+This message is used to send position command to dynamixel
+
 ### Testing the position control
 
     $ roslaunch dynamixel_workbench_controllers position_control.launch
