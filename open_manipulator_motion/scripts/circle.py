@@ -13,11 +13,15 @@ import math
 def circle(radius,res,start):
    waypoints = []
    waypoints.append(start)
+
    for i in range(0,res):
       point = copy.deepcopy(start)
       point.position.x += radius*math.cos((2*math.pi/res)*i)
       point.position.y += radius*math.sin((2*math.pi/res)*i)
       point.position.z =.2
+
+      print i, point.position.x, point.position.y
+
       waypoints.append(copy.deepcopy(point))
    waypoints.append(start)
    return waypoints                
