@@ -53,7 +53,7 @@ display_trajectory = moveit_msgs.msg.DisplayTrajectory()
 display_trajectory.trajectory_start = robot.get_current_state()
 display_trajectory.trajectory.append(plan)
 # Publish
-display_trajectory_publisher.publish(display_trajectory);
+display_trajectory_publisher.publish(display_trajectory)
 
 arm_group.execute(plan, wait=True)
 # Excutes trajectory
